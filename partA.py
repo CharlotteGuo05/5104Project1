@@ -12,6 +12,9 @@ data.columns = [
     "Age", "Concrete_Strength"
 ]
 
+
+
+
 #statistics
 summary_stats = data.describe()
 print(summary_stats)
@@ -27,6 +30,22 @@ plt.title("Distribution of Concrete Strength")
 plt.xlabel("Concrete Strength (MPa)")
 plt.ylabel("Frequency")
 plt.grid(axis='y', alpha=0.75)
+plt.show()
+
+#age: histogram
+plt.figure()
+plt.hist(data["Age"], bins=30)
+plt.title("Distribution of Age")
+plt.xlabel("Age (days)")
+plt.ylabel("Frequency")
+plt.show()
+
+#cement: histogram
+plt.figure()
+plt.hist(data["Cement"], bins=30)
+plt.title("Distribution of Cement Content")
+plt.xlabel("Cement (kg/m^3)")
+plt.ylabel("Frequency")
 plt.show()
 
 #cement vs strength: scatter plot
